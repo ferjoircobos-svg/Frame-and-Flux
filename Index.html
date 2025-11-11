@@ -1,0 +1,457 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimization: Added a description for Google -->
+    <meta name="description" content="Frame & Flux: Luxury visual arts, wedding photography, editorial portraits, and commercial photography.">
+    
+    <title>Frame & Flux | Luxury Visual Arts</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-900">
+
+    <!-- 
+      Header / Navigation
+      - Added mobile hamburger menu
+      - Made desktop links hide on mobile
+    -->
+    <header role="banner" class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 py-4 border-b border-gray-800">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="Index.html#home" class="flex items-center gap-2 z-50"> <!-- Changed to Index.html#home -->
+                <!-- Corrected path to use your uploaded logo file -->
+                <img src="images/Fram and flux.PNG" alt="Frame and Flux Photography Logo" class="h-12 w-12 rounded-full" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x100/1a1a1a/ffffff?text=F%26F';">
+                <span class="text-2xl font-serif text-white tracking-wide">FRAME & FLUX</span>
+                <span class="text-sm text-gold ml-2 hidden sm:block">Luxury Visual Arts</span>
+            </a>
+            
+            <!-- Desktop Navigation Links (Hidden on mobile) -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="Index.html#portfolio">PORTFOLIO</a> <!-- Changed to Index.html#portfolio -->
+                <a href="Index.html#services">SERVICES</a> <!-- Changed to Index.html#services -->
+                <a href="Index.html#about">ABOUT US</a> <!-- Changed to Index.html#about -->
+                <a href="Index.html#testimonials">TESTIMONIALS</a> <!-- Changed to Index.html#testimonials -->
+                <a href="Index.html#contact" class="bg-gold text-gray-900 px-6 py-2 rounded-full hover:bg-opacity-80 transition-all duration-300">CONTACT</a> <!-- Changed to Index.html#contact -->
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-gray-900 pt-24">
+            <div class="flex flex-col items-center justify-center space-y-10 text-2xl font-serif">
+                <a href="Index.html#portfolio" class="mobile-nav-link">PORTFOLIO</a> <!-- Changed -->
+                <a href="Index.html#services" class="mobile-nav-link">SERVICES</a> <!-- Changed -->
+                <a href="Index.html#about" class="mobile-nav-link">ABOUT US</a> <!-- Changed -->
+                <a href="Index.html#testimonials" class="mobile-nav-link">TESTIMONIALS</a> <!-- Changed -->
+                <a href="Index.html#contact" class="mobile-nav-link bg-gold text-gray-900 px-8 py-3 rounded-full mt-4">CONTACT</a> <!-- Changed -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main role="main">
+
+        <!-- 
+          1. Hero Section
+          - Grid is now responsive: 1-col on mobile, 2-col on desktop
+          - Updated all alt text to be descriptive
+        -->
+        <section id="home" class="relative h-[100vh] overflow-hidden">
+            <!-- This grid is now responsive using Tailwind classes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 h-full">
+                <div><img src="images/Wedding/wedding 2.png" alt="A close-up shot of two hands exchanging wedding rings, symbolizing a marriage ceremony." class="w-full h-full object-cover"></div>
+                <div><img src="images/Gemini_Generated_Image_v6mfkbv6mfkbv6mf.png" alt="An elegant couple posing for a portrait in a luxurious, softly lit setting." class="w-full h-full object-cover"></div>
+                <div><img src="images/Gemini_Generated_Image_3evkzy3evkzy3evk.png" alt="A wide-angle photograph showcasing the grand architecture and opulent interior of a luxury wedding venue." class="w-full h-full object-cover"></div>
+                <div><img src="images/Fram and flux.PNG" alt="Beautifully decorated tables at an event, set up at dusk with ambient lighting." class="w-full h-full object-cover"></div>
+            </div>
+
+            <!-- Our Vision Overlay -->
+            <div id="our-vision-overlay" class="text-white">
+                <h2 class="text-3xl md:text-4xl font-serif text-gold mb-4">OUR VISION IS SIMPLE:</h2>
+                <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+                    To be the creative partner you trust for timeless and immersive memories and moments. We aim to craft perfect, timeless, emotive, and captivating visual stories you will revisit for years to come.
+                </p>
+                <a href="#portfolio" class="inline-block bg-gold text-gray-900 font-semibold px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg">
+                    EXPLORE OUR PORTFOLIO
+                </a>
+                <!-- The small Frame/Flux icons as seen in the image -->
+                <div class="flex justify-center items-center gap-6 mt-10">
+                    <img src="https://placehold.co/60x60/333/fff?text=FRAME" alt="Frame icon" class="w-16 h-16 opacity-75">
+                    <img src="https://placehold.co/60x60/333/fff?text=FLUX" alt="Flux icon" class="w-16 h-16 opacity-75">
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          2. Portfolio Section
+          - Added aria-labels for accessibility
+          - *** UPDATED WEDDING LINK TO 'wedding-story.html' ***
+        -->
+        <section id="portfolio" aria-labelledby="portfolio-heading" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 id="portfolio-heading" class="text-5xl font-serif text-center mb-16 text-white">Our Work</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- *** THIS LINK IS NOW UPDATED *** -->
+                    <a href="wedding-story.html" aria-label="View our wedding story portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Wedding/Wedding.png" alt="A beautiful black and white photo of a bride and groom walking hand in hand." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Weddings</div>
+                    </a>
+                    <a href="Portraits.html" aria-label="View our editorial portrait portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Editorial/Editorial 1.png" alt="A striking black and white portrait of a man in a suit looking thoughtfully out a window." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Portraits</div>
+                    </a>
+                    <a href="Comercial.html" aria-label="View our commercial brand portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Comercial/commercial 1.png" alt="A professional product shot of a luxury watch on a dark, textured background." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Commercial</div>
+                    </a>
+                    <a href="Property.html" aria-label="View our luxury property portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Properties/Properties.png" alt="A stunning photograph of a modern luxury house with a swimming pool at twilight." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Properties</div>
+                    </a>
+                    <a href="Fashion.html" aria-label="View our fashion editorial portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Fashion/Fashion.png" alt="A high-fashion shot of a model in a dramatic pose wearing avant-garde clothing." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Fashion</div>
+                    </a>
+                    <a href="Events.html" aria-label="View our lifestyle event portfolio" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group">
+                        <img src="images/Lifestyle/Lifestyle.png" alt="A candid shot of people laughing and talking at a vibrant, crowded lifestyle event." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 flex items-center justify-center text-white text-2xl font-serif opacity-0 group-hover:opacity-100 transition-opacity duration-300">Events</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Section -->
+        <section id="services" aria-labelledby="services-heading" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 id="services-heading" class="text-5xl font-serif text-center mb-16 text-white">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-5xl mx-auto">
+                    <!-- Service 1: Weddings -->
+                    <div class="p-6 rounded-lg bg-gray-900 shadow-lg border border-gray-700">
+                        <svg class="w-16 h-16 mx-auto mb-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <h3 class="text-3xl font-serif mb-3 text-white">Luxury Weddings</h3>
+                        <p class="text-gray-300 leading-relaxed">Capturing the intimate moments and grand celebrations of your special day with unparalleled elegance.</p>
+                    </div>
+                    <!-- Service 2: Portraits -->
+                    <div class="p-6 rounded-lg bg-gray-900 shadow-lg border border-gray-700">
+                        <svg class="w-16 h-16 mx-auto mb-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <h3 class="text-3xl font-serif mb-3 text-white">Editorial Portraits</h3>
+                        <p class="text-gray-300 leading-relaxed">Crafting striking and expressive portraits for individuals, families, and high-profile branding.</p>
+                    </div>
+                    <!-- Service 3: Commercial -->
+                    <div class="p-6 rounded-lg bg-gray-900 shadow-lg border border-gray-700">
+                        <svg class="w-16 h-16 mx-auto mb-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-1 4h1m0 0h.01M12 7h1m0 4h1m0 4h.01"></path></svg>
+                        <h3 class="text-3xl font-serif mb-3 text-white">Commercial & Property</h3>
+                        <p class="text-gray-300 leading-relaxed">Delivering compelling visual narratives for brands, products, and exclusive real estate listings.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. About Section -->
+        <section id="about" aria-labelledby="about-heading" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 id="about-heading" class="text-5xl font-serif mb-6 text-white">Behind the Lens</h2>
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            Welcome to Frame & Flux, where every image tells a story of elegance and passion. I'm Alex, the lead artist, dedicated to transforming your most cherished moments into enduring works of art.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed">
+                            With over a decade of experience in luxury visual arts, I specialize in crafting bespoke photographic experiences. From the intricate details of a grand wedding to the powerful narrative of a commercial campaign, my approach is always tailored, discerning, and driven by a pursuit of perfection.
+                        </p>
+                    </div>
+                    <div class="relative aspect-square rounded-xl overflow-hidden shadow-2xl">
+                                                                        <img src="images/Gemini_Generated_Image_3evkzy3evkzy3evk.png" 
+                                                                             alt="A professional headshot of Alex, the lead photographer, smiling warmly."
+                                                                             class="w-full h-full object-cover">                        <div class="absolute inset-0 bg-black/30"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-3xl font-serif">Alex M.</h3>
+                            <p class="text-gold">Lead Photographer & Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Testimonials Section -->
+        <section id="testimonials" aria-labelledby="testimonials-heading" class="py-20 md:py-32 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 id="testimonials-heading" class="text-5xl font-serif text-center mb-16 text-white">What Our Clients Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700">
+                        <p class="text-xl italic text-gray-300 mb-6 leading-relaxed">
+                            "Frame & Flux transformed our wedding day into a timeless visual narrative. Every photograph is a masterpiece, capturing emotions we'll cherish forever. Truly exceptional service and artistry!"
+                        </p>
+                        <p class="text-gold font-semibold text-lg">- Sarah & David L.</p>
+                        <p class="text-gray-400 text-sm">Luxury Wedding Client</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700">
+                        <p class="text-xl italic text-gray-300 mb-6 leading-relaxed">
+                            "The commercial shoot for our new product line was flawless. Frame & Flux delivered stunning, high-impact imagery that perfectly aligned with our brand vision. Professional and incredibly talented."
+                        </p>
+                        <p class="text-gold font-semibold text-lg">- Emily R.</p>
+                        <p class="text-gray-400 text-sm">Marketing Director, 'Innovate Co.'</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact/Inquiry Section -->
+        <section id="contact" aria-labelledby="contact-heading" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto bg-gray-800 p-6 sm:p-10 rounded-xl shadow-2xl border border-gray-700">
+                    <h2 id="contact-heading" class="text-4xl md:text-5xl font-serif text-center mb-4 text-white">Get a Quote</h2>
+                    <p class="text-gray-400 text-center text-lg mb-12">
+                        Tell us about your project to check availability and receive a custom quote.
+                    </p>
+
+                    <!-- Inquiry Form -->
+                    <form id="inquiry-form" class="space-y-6">
+                        <!-- Contact Details -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+44 123 456 7890">
+                            </div>
+                            <div>
+                                <label for="event-date" class="form-label">Event Date</label>
+                                <input type="date" id="event-date" name="event-date" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="event-location" class="form-label">Event Venue / Location</label>
+                            <input type="text" id="event-location" name="event-location" class="form-input" placeholder="Street/Town" required>
+                        </div>
+
+                        <!-- Event Type Selection -->
+                        <div>
+                            <label for="event-type" class="form-label">What type of shoot is this?</label>
+                            <select id="event-type" name="event-type" class="form-select" required>
+                                <option value="">Please select...</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="property">Property</option>
+                            </select>
+                        </div>
+
+                        <!-- Conditional Fields -->
+                        <div id="wedding-fields" class="hidden space-y-6 pt-2">
+                            <div>
+                                <label for="guests" class="form-label">Number of Guests</label>
+                                <input type="text" id="guests" name="guests" class="form-input" placeholder="e.g., 150">
+                            </div>
+                        </div>
+                        <div id="portrait-commercial-fields" class="hidden space-y-6 pt-2">
+                            <div>
+                                <label for="project-goal" class="form-label">How many people/products, or what is the project goal?</label>
+                                <textarea id="project-goal" name="project-goal" rows="4" class="form-textarea" placeholder="e.g., Family portrait with 5 people..."></textarea>
+                            </div>
+                        </div>
+                        <div id="commercial-fields" class="hidden space-y-6 pt-2">
+                            <div>
+                                <label for="website-url" class="form-label">Company Website URL</label>
+                                <input type="url" id="website-url" name="website-url" class="form-input" placeholder="https://www.yourcompany.com">
+                            </div>
+                        </div>
+                        <div id="property-fields" class="hidden space-y-6 pt-2">
+                            <div>
+                                <label for="property-details" class="form-label">Property Details</label>
+                                <textarea id="property-details" name="property-details" rows="5" class="form-textarea" placeholder="e.g., Luxury Property, House, 4 Bedrooms..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Project Details -->
+                        <div>
+                            <label for="project-vision" class="form-label">Tell us about your project!</label>
+                            <textarea id="project-vision" name="project-vision" rows="5" class="form-textarea" placeholder="What are your must-have shots, what style do you love..."></textarea>
+                        </div>
+
+                        <!-- Budget -->
+                        <div>
+                            <label for="budget" class="form-label">Estimated Budget</label>
+                            <select id="budget" name="budget" class="form-select" required>
+                                <option value="">Select your budget range...</option>
+                                <option value="99-199">£99 - £199</option>
+                                <option value="200-399">£200 - £399</option>
+                                <option value="400-699">£400 - £699</option>
+                                <option value="700-999">£700 - £999</option>
+                                <option value="1000-2999">£1000 - £2999</option>
+                                <option value="3000+">£3000+</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-6">
+                            <button type="submit" class="w-full bg-gold hover:bg-opacity-90 text-gray-900 font-semibold py-4 px-6 rounded-lg text-lg transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-gray-800">
+                                CHECK AVAILABILITY AND GET A QUOTE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="text-center py-10 bg-black border-t border-gray-800">
+        <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> Frame & Flux. All rights reserved.</p>
+    </footer>
+
+    <!-- Thank You Modal (Initially Hidden) -->
+    <div id="thank-you-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-6">
+        <div class="bg-gray-900 rounded-xl shadow-2xl p-8 md:p-12 text-center max-w-lg w-full border border-gray-700">
+            <svg class="w-16 h-16 text-gold mx-auto mb-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h1 class="text-3xl font-serif font-bold text-white mb-3">Thank You!</h1>
+            <p class="text-lg text-gray-300 mb-8">
+                We will check your date and aim to respond within 24 hours!
+            </p>
+            <button id="close-modal-btn" class="bg-gold hover:bg-opacity-90 text-gray-900 font-medium py-3 px-8 rounded-lg transition duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- 
+      JavaScript Section
+      - Added logic for the new mobile menu
+      - Kept all existing modal and form logic
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Mobile Menu Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+            // Close menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+
+            // --- Footer Year Logic ---
+            const currentYearEl = document.getElementById('current-year');
+            if (currentYearEl) {
+                currentYearEl.textContent = new Date().getFullYear();
+            }
+
+            // --- Modal Logic ---
+            const thankYouModal = document.getElementById('thank-you-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            
+            if(closeModalBtn) {
+                closeModalBtn.addEventListener('click', () => {
+                    if(thankYouModal) {
+                        thankYouModal.classList.add('hidden');
+                    }
+                });
+            }
+            if(thankYouModal) {
+                thankYouModal.addEventListener('click', (e) => {
+                    if (e.target === thankYouModal) {
+                        thankYouModal.classList.add('hidden');
+                    }
+                });
+            }
+
+            // --- Conditional Form Logic ---
+            const inquiryForm = document.getElementById('inquiry-form');
+            const eventType = document.getElementById('event-type');
+            const weddingFields = document.getElementById('wedding-fields');
+            const portraitCommercialFields = document.getElementById('portrait-commercial-fields');
+            const commercialFields = document.getElementById('commercial-fields');
+            const propertyFields = document.getElementById('property-fields');
+            const allConditionalFields = [weddingFields, portraitCommercialFields, commercialFields, propertyFields].filter(el => el != null);
+
+            function toggleConditionalFields() {
+                if (!eventType) return;
+                
+                const selectedType = eventType.value;
+                allConditionalFields.forEach(field => {
+                    if (field) field.classList.add('hidden');
+                });
+
+                switch (selectedType) {
+                    case 'wedding':
+                        if (weddingFields) weddingFields.classList.remove('hidden');
+                        break;
+                    case 'portrait':
+                        if (portraitCommercialFields) portraitCommercialFields.classList.remove('hidden');
+                        break;
+                    case 'commercial':
+                        if (portraitCommercialFields) portraitCommercialFields.classList.remove('hidden');
+                        if (commercialFields) commercialFields.classList.remove('hidden');
+                        break;
+                    case 'property':
+                        if (propertyFields) propertyFields.classList.remove('hidden');
+                        break;
+                }
+            }
+
+            if(eventType) {
+                eventType.addEventListener('change', toggleConditionalFields);
+            }
+            
+            if(inquiryForm) {
+                inquiryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Redirect to Thank you.html after form submission
+                    window.location.href = "Thank you.html";
+                });
+            }
+            
+            // Initial check on page load
+            toggleConditionalFields(); 
+        });
+    </script>
+
+</body>
+</html>

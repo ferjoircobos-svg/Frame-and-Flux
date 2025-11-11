@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our property photography portfolio at Frame & Flux.">
+    
+    <title>Property Photography | Frame & Flux</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-900">
+
+    <header role="banner" class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 py-4 border-b border-gray-800">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="Index.html#home" class="flex items-center gap-2 z-50">
+                <img src="images/Fram and flux.PNG" alt="Frame and Flux Photography Logo" class="h-12 w-12 rounded-full" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x100/1a1a1a/ffffff?text=F%26F';">
+                <span class="text-2xl font-serif text-white tracking-wide">FRAME & FLUX</span>
+                <span class="text-sm text-gold ml-2 hidden sm:block">Luxury Visual Arts</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="Index.html#portfolio">PORTFOLIO</a>
+                <a href="Index.html#services">SERVICES</a>
+                <a href="Index.html#about">ABOUT US</a>
+                <a href="Index.html#testimonials">TESTIMONIALS</a>
+                <a href="Index.html#contact" class="bg-gold text-gray-900 px-6 py-2 rounded-full hover:bg-opacity-80 transition-all duration-300">CONTACT</a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-gray-900 pt-24">
+            <div class="flex flex-col items-center justify-center space-y-10 text-2xl font-serif">
+                <a href="Index.html#portfolio" class="mobile-nav-link">PORTFOLIO</a>
+                <a href="Index.html#services" class="mobile-nav-link">SERVICES</a>
+                <a href="Index.html#about" class="mobile-nav-link">ABOUT US</a>
+                <a href="Index.html#testimonials" class="mobile-nav-link">TESTIMONIALS</a>
+                <a href="Index.html#contact" class="mobile-nav-link bg-gold text-gray-900 px-8 py-3 rounded-full mt-4">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <section aria-labelledby="property-hero-heading" class="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center overflow-hidden">
+            <img src="images/Properties/Properties.png" alt="A stunning photograph of a modern luxury house with a swimming pool at twilight." class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="relative z-20 p-6">
+                <h1 id="property-hero-heading" class="text-5xl md:text-7xl font-serif text-white mb-4">Property Photography</h1>
+                <p class="text-xl md:text-2xl text-gray-200">Showcasing your property in the best light.</p>
+            </div>
+        </section>
+
+        <section id="property-gallery" aria-labelledby="property-gallery-heading" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                
+                <div class="mb-12">
+                    <a href="Index.html#portfolio" class="text-gold hover:text-white transition-colors duration-200 text-lg">
+                        &larr; Back to All Portfolios
+                    </a>
+                </div>
+
+                <h2 id="property-gallery-heading" class="text-4xl font-serif text-center mb-6 text-white">The Gallery</h2>
+                <p class="text-lg text-gray-400 text-center max-w-3xl mx-auto mb-16">
+                    A portfolio of our property photography, from luxury homes to commercial real estate.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <a href="images/Properties/Properties.png" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="property-gallery">
+                        <img src="images/Properties/Properties.png" alt="A stunning photograph of a modern luxury house with a swimming pool at twilight." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact-cta-heading" class="py-20 md:py-32 bg-gray-800 text-center">
+            <div class="container mx-auto px-6">
+                <h2 id="contact-cta-heading" class="text-4xl font-serif text-white mb-6">Selling or Renting a Property?</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+                    High-quality photography can make all the difference. Contact us for a quote.
+                </p>
+                <a href="Index.html#contact" class="inline-block bg-gold text-gray-900 font-semibold px-10 py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg">
+                    GET A QUOTE
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo" class="text-center py-10 bg-black border-t border-gray-800">
+        <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> Frame & Flux. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            const currentYearEl = document.getElementById('current-year');
+            if (currentYearEl) {
+                currentYearEl.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+
+</body>
+</html>

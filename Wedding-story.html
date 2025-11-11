@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our luxury wedding stories portfolio at Frame & Flux.">
+    
+    <title>Wedding Stories | Frame & Flux</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-900">
+
+    <!-- 
+      Header / Navigation
+      - Same as Index.html for consistency
+      - Links now point back to Index.html sections
+    -->
+    <header role="banner" class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 py-4 border-b border-gray-800">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="Index.html#home" class="flex items-center gap-2 z-50">
+                <img src="images/Fram and flux.PNG" alt="Frame and Flux Photography Logo" class="h-12 w-12 rounded-full" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/100x100/1a1a1a/ffffff?text=F%26F';">
+                <span class="text-2xl font-serif text-white tracking-wide">FRAME & FLUX</span>
+                <span class="text-sm text-gold ml-2 hidden sm:block">Luxury Visual Arts</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="Index.html#portfolio">PORTFOLIO</a>
+                <a href="Index.html#services">SERVICES</a>
+                <a href="Index.html#about">ABOUT US</a>
+                <a href="Index.html#testimonials">TESTIMONIALS</a>
+                <a href="Index.html#contact" class="bg-gold text-gray-900 px-6 py-2 rounded-full hover:bg-opacity-80 transition-all duration-300">CONTACT</a>
+            </div>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 text-white">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-gray-900 pt-24">
+            <div class="flex flex-col items-center justify-center space-y-10 text-2xl font-serif">
+                <a href="Index.html#portfolio" class="mobile-nav-link">PORTFOLIO</a>
+                <a href="Index.html#services" class="mobile-nav-link">SERVICES</a>
+                <a href="Index.html#about" class="mobile-nav-link">ABOUT US</a>
+                <a href="Index.html#testimonials" class="mobile-nav-link">TESTIMONIALS</a>
+                <a href="Index.html#contact" class="mobile-nav-link bg-gold text-gray-900 px-8 py-3 rounded-full mt-4">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content for Wedding Page -->
+    <main role="main">
+
+        <!-- 1. Hero Section for Wedding Page -->
+        <section aria-labelledby="wedding-hero-heading" class="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center overflow-hidden">
+            <!-- *** CORRECTED PATH *** -->
+            <img src="images/Wedding/Wedding.png" alt="A couple's first dance at their luxury wedding" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <div class="absolute inset-0 bg-black/50 z-10"></div> <!-- Dark overlay -->
+            <div class="relative z-20 p-6">
+                <h1 id="wedding-hero-heading" class="text-5xl md:text-7xl font-serif text-white mb-4">Wedding Stories</h1>
+                <p class="text-xl md:text-2xl text-gray-200">Timeless, emotive, and captivating visual stories.</p>
+            </div>
+        </section>
+
+        <!-- 2. Wedding Gallery Section -->
+        <section id="wedding-gallery" aria-labelledby="wedding-gallery-heading" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                
+                <!-- Back to Portfolio Link -->
+                <div class="mb-12">
+                    <a href="Index.html#portfolio" class="text-gold hover:text-white transition-colors duration-200 text-lg">
+                        &larr; Back to All Portfolios
+                    </a>
+                </div>
+
+                <h2 id="wedding-gallery-heading" class="text-4xl font-serif text-center mb-6 text-white">The Gallery</h2>
+                <p class="text-lg text-gray-400 text-center max-w-3xl mx-auto mb-16">
+                    Explore a selection of moments from our recent wedding stories. Each image is crafted with care, capturing the unique essence and emotion of the day.
+                </p>
+                
+                <!-- 
+                  Gallery Grid
+                  - Using your 2 uploaded images + 4 placeholders
+                -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- *** CORRECTED PATHS *** -->
+                    <a href="images/Wedding/Wedding.png" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="images/Wedding/Wedding.png" alt="A romantic photo of a bride and groom dancing closely under a beautifully decorated canopy." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                    <!-- *** CORRECTED PATHS *** -->
+                    <a href="images/Wedding/wedding 2.png" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="images/Wedding/wedding 2.png" alt="A collage showcasing six different moments from a wedding, including the ceremony, reception, and portraits." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                    <!-- Image 3: Placeholder -->
+                    <a href="https://placehold.co/800x800/2d3a4b/a1b2c3?text=Details+Shot" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="https://placehold.co/800x800/2d3a4b/a1b2c3?text=Details+Shot" alt="A close-up shot of the wedding rings and other fine details." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                    <!-- Image 4: Placeholder -->
+                    <a href="https://placehold.co/800x800/3c4b5c/b1c2d3?text=Candid+Moment" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="https://placehold.co/800x800/3c4b5c/b1c2d3?text=Candid+Moment" alt="A candid, joyful moment captured between the wedding guests." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                    <!-- Image 5: Placeholder -->
+                    <a href="https://placehold.co/800x800/4d5a6b/c1d2e3?text=Venue+Photo" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="https://placehold.co/800x800/4d5a6b/c1d2e3?text=Venue+Photo" alt="A wide shot of the stunning wedding venue and its surroundings." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                    <!-- Image 6: Placeholder -->
+                    <a href="https://placehold.co/800x800/5e6b7c/d1e2f3?text=Couple+Portrait" class="block relative aspect-square rounded-lg overflow-hidden shadow-xl group" data-lightbox="wedding-gallery">
+                        <img src="https://placehold.co/800x800/5e6b7c/d1e2f3?text=Couple+Portrait" alt="A beautifully composed portrait of the happy couple in a scenic location." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Contact CTA Section -->
+        <section aria-labelledby="contact-cta-heading" class="py-20 md:py-32 bg-gray-800 text-center">
+            <div class="container mx-auto px-6">
+                <h2 id="contact-cta-heading" class="text-4xl font-serif text-white mb-6">Ready to Tell Your Story?</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+                    If you feel a connection to our work, we would be honored to be a part of your day.
+                </p>
+                <a href="Index.html#contact" class="inline-block bg-gold text-gray-900 font-semibold px-10 py-4 rounded-full hover:bg-opacity-90 transition-all duration-300 text-lg">
+                    INQUIRE ABOUT YOUR DATE
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="text-center py-10 bg-black border-t border-gray-800">
+        <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> Frame & Flux. All rights reserved.</p>
+    </footer>
+
+    <!-- 
+      JavaScript Section
+      - Same as Index.html
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Mobile Menu Logic ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+            // Close menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+
+            // --- Footer Year Logic ---
+            const currentYearEl = document.getElementById('current-year');
+            if (currentYearEl) {
+                currentYearEl.textContent = new Date().getFullYear();
+            }
+
+            // This page doesn't have the form, so no modal/form JS is needed.
+        });
+    </script>
+
+</body>
+</html>

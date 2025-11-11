@@ -1,0 +1,88 @@
+/* Custom CSS for Frame & Flux
+   - Corrected syntax error (removed extra '}')
+   - Removed #hero-grid rule (now handled by Tailwind)
+*/
+
+/* Custom Font Families & Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #d1d5db; /* Light gray for body text */
+    background-color: #1a1a1a; /* Dark background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+    color: #f3f4f6; /* Lighter text for headings */
+}
+
+/* Custom Accent Color */
+.text-gold, .bg-gold {
+    color: #1a1a1a; /* Dark text for on-gold buttons */
+    background-color: #b8935a; /* A subtle gold accent */
+}
+
+/* Fix gold text color for non-button elements */
+.text-gold {
+    color: #b8935a;
+    background-color: transparent;
+}
+
+/* Base Link Styling */
+a {
+    @apply text-gray-300 hover:text-white transition-colors duration-200;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styles for luxury form elements */
+.form-input, .form-select, .form-textarea {
+    @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition duration-200;
+}
+
+.form-label {
+    @apply block mb-2 text-sm font-medium text-gray-300;
+}
+
+/* Style for the select dropdown arrow */
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23d1d5db' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e"); /* Lighter arrow for dark background */
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem; /* Make room for the arrow */
+}
+
+/* Hero grid layout is now handled by Tailwind classes
+  in Index.html (e.g., "grid grid-cols-1 md:grid-cols-2")
+  The old #hero-grid rule has been removed.
+*/
+
+/* Our Vision overlay */
+#our-vision-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 26, 26, 0.9); /* Dark semi-transparent background */
+    padding: 2rem; /* Reduced padding slightly for mobile */
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%; /* Ensures it fits on small screens */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Make overlay text smaller on small screens */
+@media (max-width: 640px) {
+    #our-vision-overlay {
+        padding: 1.5rem;
+    }
+}
